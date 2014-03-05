@@ -1,0 +1,70 @@
+
+Description
+-----------
+Parallel Coordinate visualizer
+
+Requirements
+------------
+- Python 2.7: http://www.python.org/download/releases/2.7/
+
+
+
+Python Execution
+----------------
+python parallel_coordinates.py <file_name (.csv or .json)>
+
+Binary Execution
+----------------
+parallel_coordinates.exe <file_name (.csv or .json)>
+
+Controls
+--------
+
+Left-Mouse Click - If mouse is over a parallel coordinate, left mouse selects that coordinate
+
+Left-Mouse Drag - If mouse click was on a parallel coordinate, dragging the mouse up or down 
+creates a new visualization range for that parallel coordinate
+
+Right-Mouse Click - Resets all parallel coordinate ranges back to original
+
+
+
+Supported file type: .csv
+--------------------------
+Comma delimited spreadsheet.  CSV files must follow the following format:
+
+[1] - First row contains all the header or "key" names.
+[2] - All subsequent rows must contains data
+[3] - Data values may only be numbers, text data is not supported.
+
+e.g.
+age,height,weight,gender,id,month
+21,76,128,0,1,6
+28,78,287,0,2,11
+
+Supported file type: .json
+--------------------------
+A javascript object notational file.  Format is as follows
+
+[1] - Each data point OBJECT contains key,value pairs
+[2] - Data values may only be numbers, text data is not supported.
+
+e.g.
+[
+    {
+        "id": 0,
+        "age": 23,
+        "height": 62,
+        "weight": 179,
+        "gender": 0,
+        "month": 11
+    },
+    {
+        "id": 1,
+        "age": 23,
+        "height": 62,
+        "weight": 179,
+        "gender": 1,
+        "month": 11
+    }
+]
